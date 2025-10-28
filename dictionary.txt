@@ -1,0 +1,211 @@
+ni-,present,tense
+na-,past,tense
+nu-,future,tense
+no-,habitual,tense
+mi-,continuous,tense
+si,definite,articles
+su,indefinite,articles
+sisi,undefined,plurality
+si(num),numeric,plurality
+mi,1,numbers
+bi,2,numbers
+vi,3,numbers
+ngi,4,numbers
+ti,5,numbers
+li,6,numbers
+hli,7,numbers
+thi,8,numbers
+shi,9,numbers
+ki,10,numbers
+sa,100,numbers
+thu,I/me,pronouns
+shi,you,pronouns
+ngalu,we (inc),pronouns
+ngathi,we (exc),pronouns
+hlangu,they (pl),pronouns
+ta,it,pronouns
+vi-,male,gender
+va-,female,gender
+vu-,neuter/they,gender
+talo,and,connectors
+tho,or,connectors
+hlavu,with,connectors
+thanuka,red,colors
+kalutha,orange,colors
+kaluni,yellow,colors
+hlomasa,green,colors
+shuhlavi,blue,colors
+bakolo,gray,colors
+saluki,white,colors
+ngahlo,black,colors
+mungota,brown,colors
+naki,to/toward,postpositions
+thaku,from/away from,postpositions
+sohlu,at/location,postpositions
+tavi,in/inside,postpositions
+tovi,on/surface of,postpositions
+thavu,for/intended for,postpositions
+shalu,about/concerning/of,postpositions
+kolu,before/in front of,postpositions
+hlalu,after/behind,postpositions
+balu,between/among,postpositions
+shinu,without/lacking,postpositions
+hluvi,like/similar to,postpositions
+thasi,during/while,postpositions
+thunabi,bottom,postpositions
+kavu,big,sizes
+singa,small,sizes
+losho,tall/high,sizes
+mivo,short/low,sizes
+bano,wide/abroad,sizes
+shilu,narrow/thin,sizes
+ngatu,heavy/massive,sizes
+vasi,light (weight),sizes
+thuna,deep,sizes
+thumi,who,interrogatives
+shalo,what,interrogatives
+nakisa,where,interrogatives
+thasiha,when,interrogatives
+vasha,why,interrogatives
+shavi,how,interrogatives
+thuki,which,interrogatives
+mamo,if,interrogatives
+nava,yes,confirmations
+hla,no,confirmations
+-sa,my,possession
+-sho,your,possession
+-ngi,their,possession
+-nga,our,possession
+hlo-,that/which,relatives
+ka-,command,imperatives
+vo-,suggestion,imperatives
+shina,this,demonstratives
+hlona,that,demonstratives
+naso,here,demonstratives
+thaso,there,demonstratives
+mungisa,over there,demonstratives
+-lisa,more,comparatives
+-liki,most,comparatives
+ko,rock,nature
+kalu,sun,nature
+novi,moon,nature
+shulo,water,nature
+thanu,fire,nature
+loma,tree,nature
+savi,sky,nature
+hlavi,wind,nature
+mungo,earth,nature
+ngatu,mountain,nature
+thulo,river,nature
+shiloma,leaf,nature
+misa,animal,nature
+ngatho,night,nature
+salu,day,nature
+bako,stone/pebble,nature
+salubu,year,nature
+lomavi,forest,nature
+hlasa,grass,nature
+nako,sand,nature
+thugu,cave,nature
+shanu,island,nature
+ngolu,hill,nature
+hlaviha,valley,nature
+shungu,lake,nature
+savina,star,nature
+thaki,lightning,nature
+saviho,cloud,nature
+shumu,rain,nature
+salushu,snow,nature
+thanaga,ash,nature
+thanulo,smoke,nature
+malohlunato,coffin,nature
+thunako,pit,nature
+misi,child,society
+hlunga,people,society
+misohli,baby,society
+vulo,parent,society
+shami,friend,society
+nashi,stranger,society
+kunga,elder,society
+thalavi,leader,society
+ngali,tribe/group,society
+lavota,speaker,society
+thukota,hunter,society
+sanuto,healer,society
+thaku,spear,materials
+hluki,knife,materials
+nuguvi,rope,materials
+bamasa,basket,materials
+shoko,pot/container,materials
+thanka,firestarter,materials
+ngola,shelter/hut,materials
+malohlu,bed,materials
+vulu,drum,materials
+shavihlo,cloth,materials
+kaluno,paint/dye,materials
+shuli,stuff/thing,materials
+shisu,chess/game,materials
+navimito,word,ideas
+muhlo,curve/arch,ideas
+navimi,language,ideas
+batohli,hello,greetings
+tolo,to use,general
+thala,to go/move,general
+nuko,to come,general
+misu,to eat,general
+shulo,to drink,general
+savi,to see/watch,general
+lavo,to speak,general
+kangu,to make,general
+mati,to take/get/have,general
+thavi,to give,general
+hlomu,to sleep,general
+ngato,to die,general
+sanu,to live,general
+thuko,to hunt,general
+hlami,to grow,general
+thami,to walk,general
+hlavu,to run,general
+nguvi,to climb,general
+shalu,to swim,general
+nugu,to fall,general
+mava,to carry,general
+kathi,to build,general
+thahlu,to burn,general
+kava,to break,general
+maku,to throw,general
+thaso,to open,general
+hloku,to close,general
+vami,to sing,general
+ngavi,to listen,general
+shaka,to write,general
+vungi,to ride,general
+shaviso,to set,general
+bosa,to care,general
+laku,to play,general
+nathi,to cause/make someone do,general
+(tense)ba-,can/could,general
+shuthi,to like/like(s) to,emotion
+shavila,to know,emotion
+thanuvi,to want,emotion
+hlanu,to need,emotion
+lavisa,to love,emotion
+hlanavo,to hate,emotion
+ngasha,to fear,emotion
+sunga,to dream,emotion
+kasu,to think,emotion
+hanisa,to forget,emotion
+nasha,to remember,emotion
+thuvo,to believe,emotion
+thishosi,to suggest,emotion
+hlisu,cute/adorable/beautiful,adjectives
+hlanaku,banned,adjectives
+shava,free (no cost),adjectives
+bavo,gently,adjectives
+koti,new,adjectives
+thimu,capybara,animals
+shululi,crocodile,animals
+shumako,pig meat,food
+bamuko,sandwich,food
+luthi,in addition/by the way,adverbs
+shoma,just,adverbs
