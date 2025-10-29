@@ -1,0 +1,33 @@
+.contribute {
+  margin: 0;
+  padding: 0;
+  margin-top: 5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 90.5vh;
+}
+
+
+.button {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10vw;
+  background: linear-gradient(to bottom, var(--main), var(--main-light));
+  text-decoration: none;
+  padding: var(--margin);
+  border-radius: var(--radius);
+  gap: var(--margin);
+  color: var(--text);
+  font-weight: bold;
+  font-size: max(2vw, 1em, 1rem);
+  transform: scale(1);
+  transition: all 0.3s ease-in-out;
+}
+
+.button:hover {
+  transform: scale(1.1);
+  background: linear-gradient(to bottom, var(--main-light), var(--main-light));
+}

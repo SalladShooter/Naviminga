@@ -1,0 +1,72 @@
+body {
+  overflow: hidden;
+}
+
+.home {
+  margin: 0;
+  padding: 0;
+  margin-top: 5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 90.5vh;
+}
+
+.subtitle {
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: var(--text);
+  width: max(30vw, 2em, 2.5rem);
+  height: max(5vw, 2em, 2.5rem);
+}
+
+.button {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10vw;
+  background: var(--transparent);
+  text-decoration: none;
+  padding: calc(var(--margin) * 1.5) calc(var(--margin) * 2);
+  border-radius: 100em;
+  gap: var(--margin);
+  color: var(--text);
+  border: 1px solid var(--text);
+  font-weight: bold;
+  font-size: max(1.5vw, 1em, 1rem);
+  transform: scale(1);
+  transition: all 0.3s ease-in-out;
+}
+
+.button:hover {
+  border: none;
+  transform: scale(1.1);
+  background: linear-gradient(to bottom, var(--main), var(--main-light));
+}
+
+.altButton {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin-top: 2vw;
+  background: var(--transparent);
+  text-decoration: none;
+  padding: calc(var(--margin) * 1.5) calc(var(--margin) * 2);
+  border-radius: 100em;
+  gap: var(--margin);
+  color: var(--text);
+  border: 1px solid var(--text);
+  font-weight: bold;
+  font-size: max(1.5vw, 1em, 1rem);
+  transform: scale(1);
+  transition: all 0.3s ease-in-out;
+}
+
+.altButton:hover {
+  border: none;
+  transform: scale(1.1);
+  background: linear-gradient(to bottom, var(--alt), var(--alt-light));
+}
