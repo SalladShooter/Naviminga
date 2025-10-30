@@ -1,5 +1,8 @@
 body {
   overflow: hidden;
+  background: linear-gradient(334deg, var(--back), var(--back-light), var(--main));
+  background-size: 200% 200%;
+	animation: gradient-animation 12s ease-in-out infinite;
 }
 
 .home {
@@ -9,7 +12,32 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: 90.5vh;
+  justify-content: center;
+  width: 100%;
+  height: 100vh;
+}
+
+@keyframes gradient-animation {
+	0% {
+		background-position: 0% 0%;
+	}
+	25% {
+		background-position: 50% 0%;
+	}
+	50% {
+		background-position: 100% 100%;
+	}
+  75% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 0% 0%;
+  }
+}
+
+.title {
+  margin-top: -5vw;
+  font-size: max(10vw, 2em, 5rem);
 }
 
 .subtitle {
@@ -18,7 +46,15 @@ body {
   text-align: center;
   color: var(--text);
   width: max(30vw, 2em, 2.5rem);
-  height: max(5vw, 2em, 2.5rem);
+  height: max(10vw, 2em, 2.5rem);
+}
+
+.buttons {
+  display: flex;
+  flex-direction: row;
+  align-items: space-between;
+  justify-content: center;
+  gap: 2vw; 
 }
 
 .button {
@@ -35,7 +71,7 @@ body {
   color: var(--text);
   border: 1px solid var(--text);
   font-weight: bold;
-  font-size: max(1.5vw, 1em, 1rem);
+  font-size: max(1.5vw, 1em, 1.5rem);
   transform: scale(1);
   transition: all 0.3s ease-in-out;
 }
@@ -51,7 +87,7 @@ body {
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  margin-top: 2vw;
+  margin-top: 10vw;
   background: var(--transparent);
   text-decoration: none;
   padding: calc(var(--margin) * 1.5) calc(var(--margin) * 2);
@@ -60,7 +96,7 @@ body {
   color: var(--text);
   border: 1px solid var(--text);
   font-weight: bold;
-  font-size: max(1.5vw, 1em, 1rem);
+  font-size: max(1.5vw, 1em, 1.5rem);
   transform: scale(1);
   transition: all 0.3s ease-in-out;
 }

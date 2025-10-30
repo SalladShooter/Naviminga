@@ -4,11 +4,7 @@ fetch('dictionary.txt')
     return response.text();
   })
   .then(text => {
-    const lines = text.split('\n');
-
-    if (lines.length > 0 && lines[lines.length - 1].trim() === '') {
-      lines.pop();
-    }
+    const lines = text.split('\n').filter(line => line.trim() !== '');
 
     const items = lines.map(line => {
       const parts = line.split(',');
@@ -19,54 +15,109 @@ fetch('dictionary.txt')
       };
     });
 
-    function capitalizeFirstLetter(str) {
-      if (!str) return '';
-      return str.charAt(0).toUpperCase() + str.slice(1);
+    const dictionaryDiv = document.querySelector('.dictionary');
+    dictionaryDiv.innerHTML = `
+      <h1 class="title">Dictionary</h1>
+      <div class="searchCont">
+        <label for="search">Search Word</label>
+        <input type="text" id="search" class="search" name="search" autocomplete="off" />
+      </div>
+    `;
+
+    const tableContainer = document.createElement('div');
+
+    const table = document.createElement('table');
+    table.classList.add('table');
+
+    const thead = document.createElement('thead');
+    const headerRow = document.createElement('tr');
+    ['Naviminga', 'English', 'Group'].forEach(text => {
+      const th = document.createElement('th');
+      th.textContent = text;
+      headerRow.appendChild(th);
+    });
+    thead.appendChild(headerRow);
+    table.appendChild(thead);
+
+    const tbody = document.createElement('tbody');
+
+    items.forEach(item => {
+      const tr = document.createElement('tr');
+
+      const td1 = document.createElement('td');
+      td1.textContent = item.part1;
+      tr.appendChild(td1);
+
+      const td2 = document.createElement('td');
+      td2.textContent = item.part2;
+      tr.appendChild(td2);
+
+      const td3 = document.createElement('td');
+      td3.textContent = item.group;
+      tr.appendChild(td3);
+
+      tbody.appendChild(tr);
+    });
+
+    table.appendChild(tbody);
+    tableContainer.appendChild(table);
+    dictionaryDiv.appendChild(tableContainer);
+
+    const searchInput = document.getElementById('search');
+
+    function resetHighlights() {
+      Array.from(tbody.rows).forEach(row => {
+        row.style.display = '';
+        Array.from(row.cells).forEach(td => {
+          td.innerHTML = td.textContent;
+        });
+      });
     }
 
-    const grouped = items.reduce((acc, item) => {
-      if (!acc[item.group]) acc[item.group] = [];
-      acc[item.group].push(item);
-      return acc;
-    }, {});
+    function highlightText(text, query) {
+      if (!query) return text;
+      const regex = new RegExp(`(${escapeRegExp(query)})`, 'gi');
+      return text.replace(regex, '<mark>$1</mark>');
+    }
 
-    Object.keys(grouped).forEach(groupKey => {
-      const container = document.createElement('div');
+    function escapeRegExp(str) {
+      return str.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+    }
 
-      const caption = document.createElement('button');
-      caption.textContent = capitalizeFirstLetter(groupKey || '(No Group)');
-      caption.classList.add('dropdown');
+    searchInput.addEventListener('input', () => {
+      const query = searchInput.value.trim().toLowerCase();
 
-      const table = document.createElement('table');
-      table.classList.add('table')
+      if (!query) {
+        resetHighlights();
+        return;
+      }
 
-      const tbody = document.createElement('tbody');
+      let firstMatchRow = null;
 
-      grouped[groupKey].forEach(item => {
-        const tr = document.createElement('tr');
+      Array.from(tbody.rows).forEach(row => {
+        let showRow = false;
 
-        const td1 = document.createElement('td');
-        td1.textContent = item.part1;
-        tr.appendChild(td1);
+        Array.from(row.cells).forEach(td => {
+          const text = td.textContent.toLowerCase();
+          if (text.includes(query)) {
+            td.innerHTML = highlightText(td.textContent, query);
+            showRow = true;
+          } else {
+            td.innerHTML = td.textContent;
+          }
+        });
 
-        const td2 = document.createElement('td');
-        td2.textContent = item.part2;
-        tr.appendChild(td2);
-
-        tbody.appendChild(tr);
+        if (showRow) {
+          row.style.display = '';
+          if (!firstMatchRow) firstMatchRow = row;
+        } else {
+          row.style.display = 'none';
+        }
       });
 
-      table.appendChild(tbody);
-
-      caption.addEventListener('click', () => {
-        const isVisible = table.classList.toggle('show');
-        caption.classList.toggle('active', isVisible);
-      });
-
-      container.appendChild(caption);
-      container.appendChild(table);
-      const dictionaryDiv = document.querySelector('.dictionary');
-      dictionaryDiv.appendChild(container);
+      if (firstMatchRow) {
+        firstMatchRow.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      }
     });
   })
   .catch(error => {

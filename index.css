@@ -41,7 +41,7 @@ body {
 }
 
 .title {
-  font-size: max(7.5vw, 2em, 3rem);
+  font-size: max(7.5vw, 2em, 4rem);
   text-align: center;
 }
 
@@ -70,6 +70,7 @@ body {
   border-radius: 100em;
   top: 0;
   position: fixed;
+  z-index: 1000000 !important;
   display: flex;
   flex-direction: row;
   margin: var(--margin);
@@ -78,6 +79,7 @@ body {
   -webkit-backdrop-filter: blur(var(--margin));
   color: var(--text);
   border: 1px solid var(--back-light);
+  font-size: max(1vw, 1em, 1.5rem);
 }
 
 .link {
