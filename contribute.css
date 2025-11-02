@@ -2,9 +2,77 @@
   margin: 0;
   padding: 0;
   margin-top: 5rem;
+  margin-bottom: 5vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 100vw;
   min-height: 100vh;
+}
+
+form {
+  width: 50vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: var(--margin);
+  font-size: max(2vw, 1em, 1rem);
+}
+
+p {
+
+  width: 100%;
+  text-align: left;
+}
+
+input, textarea {
+  font-family: var(--font-family);
+  min-height: calc(1em + var(--margin));;
+  width: 100%;
+  max-width: 100%;
+  min-width: 100%;
+  background: var(--back-light);
+  color: var(--text);
+  padding: var(--margin) calc(var(--margin) * 1.5);
+  border-radius: 5vh;
+  border: 1px solid var(--transparent);
+  font-size: max(2vw, 1em, 1rem);
+  transition: all 0.3s ease-in-out;
+}
+
+input:hover, textarea:hover {
+  border: 1px solid var(--text);
+}
+
+label {
+  width: 100%;
+  text-align: left;
+  margin-top: var(--margin);
+  color: #aaabbc;
+}
+
+.required {
+  color: var(--warning);
+  margin: var(--margin);
+}
+
+button {
+  background: var(--transparent);
+  border: 1px solid var(--text);
+  padding: calc(var(--margin) * 1.5) calc(var(--margin) * 2.5);
+  margin: var(--margin);
+  border-radius: 100em;
+  color: var(--text);
+  font-size: max(2vw, 1em, 1rem);
+  font-weight: bold;
+  transform: scale(1);
+  transition: all 0.3s ease-in-out;
+}
+
+button:hover {
+  background: linear-gradient(to bottom, var(--main), var(--main-light));
+  border: none;
+  transform: scale(1.1);
 }

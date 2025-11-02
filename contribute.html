@@ -23,8 +23,21 @@
   <div class="contribute">
     <h1 class="title">Contribute</h1>
     <div class="form">
+        <form id="suggestions">
+          <label for="english">English<span class="required">*</span></label>
+          <input name="english" aria-required="true" required />
+          <label for="naviminga">Naviminga</label>
+          <input name="naviminga" />
+          <label for="grammar_rules">Grammar Rules</label>
+          <textarea name="grammar_rules" ></textarea>
+          <label for="name">Name</label>
+          <input name="name" />
+          <p><span class="required">*</span>Required</p>
+          <button type="submit">Submit</button>
+        </form>
     </div>
   </div>
+  <script src="contribute.js"></script>
 </body>
 
 </html>

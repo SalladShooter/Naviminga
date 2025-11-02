@@ -3,7 +3,9 @@
   --margin: 0.5em;
   --margin-neg: -0.5em;
   --font: 1em;
-  --shadow: rgba(255,255,255,0.1)
+  --font-family: Arial, Helvetica, sans-serif;
+  --shadow: rgba(255,255,255,0.1);
+  --warning: #ff1567;
   --back: #dde;
   --back-light: #dde;
   --text: #111122;
@@ -43,7 +45,7 @@ body {
 .title {
   font-size: max(7.5vw, 2em, 4rem);
   text-align: center;
-  margin-top: 3em;
+  margin-top: 20vh;
 }
 
 .svg {
