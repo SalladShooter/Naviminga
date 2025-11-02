@@ -39,7 +39,7 @@ mark {
   padding: var(--margin) calc(var(--margin) * 2);
   border: 1px solid var(--back-light);
   color: var(--text);
-  border-radius: 100em;
+  border-radius: var(--radius);
   font-size: max(1vw, 1em, 1rem);
   transition: all 0.3s ease-in-out;
 }

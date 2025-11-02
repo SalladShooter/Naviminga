@@ -10,6 +10,41 @@
   min-height: 100vh;
 }
 
+.ff-form {
+  width: 100% !important;
+  min-width: 100% !important;
+  max-width: none !important;
+  margin-top: 10em;
+  min-height: 100vh !important;
+}
+
+.ff-form input, .ff-form textarea {
+  background: var(--back-light) !important;
+  border-radius: var(--radius) !important;
+  border: none !important;
+  margin: var(--margin) !important;
+  width: 100% !important;
+  transform: scale(1) !important;
+  transition: all 0.3s ease-in-out !important;
+}
+
+.ff-form input:hover, .ff-form textarea:hover {
+  border: 1px solid var(--text) !important;
+}
+
+.ff-form button {
+  background: var(--transparent) !important;
+  border-radius: 100em !important;
+  border: 1px solid var(--text) !important;
+  transition: all 0.3s ease-in-out !important;
+}
+
+.ff-form button:hover {
+  background: linear-gradient(to bottom, var(--main), var(--main-light)) !important;
+  transform: scale(1.1) !important;
+  border: none !important;
+}
+
 form {
   width: 50vw;
   display: flex;
