@@ -14,16 +14,21 @@
   width: 100% !important;
   min-width: 100% !important;
   max-width: none !important;
-  margin-top: 10em;
+  margin-top: 10em !important;
   min-height: 100vh !important;
+  align-items: center !important;
+}
+
+.ff-form label {
+  font-size: max(1vw, 1em, 2rem) !important;
 }
 
 .ff-form input, .ff-form textarea {
+  font-size: max(1vw, 1em, 2rem) !important;
   background: var(--back-light) !important;
   border-radius: var(--radius) !important;
   border: none !important;
-  margin: var(--margin) !important;
-  width: 100% !important;
+  width: 90vw !important;
   transform: scale(1) !important;
   transition: all 0.3s ease-in-out !important;
 }
@@ -36,7 +41,36 @@
   background: var(--transparent) !important;
   border-radius: 100em !important;
   border: 1px solid var(--text) !important;
+  font-size: max(1vw, 0.5em, 1.5rem) !important;
+  padding: calc(var(--margin) * 1.5) calc(var(--margin) * 4) !important;
   transition: all 0.3s ease-in-out !important;
+}
+
+.ff-form button img {
+  display: block !important;
+  position: relative !important;
+  width: 100% !important;
+  height: 100% !important;
+}
+
+.ff-title, .ff-has-title {
+  display: none !important;
+}
+
+.ff-button-bar {
+  display: flex;
+  flex-direction: row;
+  justify-content: center !important;
+  align-items: center !important;
+  gap: var(--margin) !important;
+}
+
+img {
+  font-size: 0 !important;
+  display: none !important;
+  position: fixed !important;
+  width: 0 !important;
+  height: 0 !important;
 }
 
 .ff-form button:hover {
