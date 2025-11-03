@@ -17,6 +17,7 @@ fetch('dictionary.txt')
 
     const dictionaryDiv = document.querySelector('.dictionary');
     dictionaryDiv.innerHTML = `
+      <h1 class="title"></h1>
       <div class="searchCont">
         <label for="search">Search Word</label>
         <input type="text" id="search" class="search" name="search" autocomplete="off" />

@@ -10,6 +10,10 @@
   margin-bottom: 5rem;
 }
 
+.title {
+  margin-top: 5vh;
+}
+
 mark {
   padding: calc(var(--margin) * 0.5);
   margin: 0 calc(var(--margin) / 4);
